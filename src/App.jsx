@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Box, CssBaseline, Typography } from '@mui/material';
-import NavBar from './components/NavBar';
+
 
 
 
@@ -8,8 +8,7 @@ const  App = () => {
 
 
   return (
-    <React.Fragment>
-        <NavBar/>
+      <React.Fragment>
       <CssBaseline />
       <Container maxWidth='100%'>
         <Box sx={{}}>

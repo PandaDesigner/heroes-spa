@@ -1,6 +1,5 @@
 import React from 'react'
 import { AppBar, Toolbar, Typography, Button, Box, IconButton } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
 
 
 const NavBar = () => {

@@ -5,7 +5,6 @@ import { Typography } from '@mui/material'
 export const LayoutPrincipal = () => {
   return (
         <>
-            <NavBar/>
             <Typography>
                 desde el Layout Hola mundo
             </Typography>
