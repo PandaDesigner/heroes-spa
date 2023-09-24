@@ -1,23 +1,29 @@
-/**
-    * @description      : 
-    * @author           : 
-    * @group            : 
-    * @created          : 18/10/2022 - 21:47:30
-    * 
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 18/10/2022
-    * - Author          : 
-    * - Modification    : 
-**/
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { HeroesApp } from './HeroesApp';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {HeroesApp} from './HeroesApp'
 import styles from './styles.css'
+import {MarvelPages, DcPages} from './heroes/pages'
 
+const rootArr = [
+  {
+    path: '/',
+    element: <HeroesApp />,
+  },
+  {
+    path: 'dc',
+    element: <DcPages />,
+  },
+  {
+    path: 'marvel',
+    element: <MarvelPages />,
+  },
+]
+
+const router = createBrowserRouter(rootArr)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HeroesApp />
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
