@@ -1,2 +1,2 @@
 export * from './MarvelPages.jsx'
-export * from './DCPages.jsx'
+export * from './DcPages.jsx'

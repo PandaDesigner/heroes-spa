@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import {createBrowserRouter, Navigate, RouterProvider} from 'react-router-dom'
-import {HeroesApp} from './HeroesApp'
+import {Container} from '@mui/material'
 import styles from './styles.css'
-import {MarvelPages, DcPages} from './heroes/pages'
-import {Login} from './auth/pages/LoginPage'
+import {MarvelPages, DcPages, Navbar} from './heroes'
+import {Login} from './auth'
+import {HeroesApp} from './HeroesApp'
 
 const rootArr = [
   {
@@ -29,6 +31,9 @@ const router = createBrowserRouter(rootArr)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Navbar />
+    <Container maxWidth={'100%'}>
+      <RouterProvider router={router} />
+    </Container>
   </React.StrictMode>
 )
